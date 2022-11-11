@@ -42,6 +42,9 @@
     * << A simple drawing that shows the class relationships in your code (see below for an example). This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm. >>
         * ![class diagram](assets/class_diagram.jpg) 
 * Classes
+    class Player
+    
+    
     * << You should have a list of each of your classes with a description. >>
 
 ## Project Structure and File List

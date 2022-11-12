@@ -29,7 +29,7 @@ class Bearcat(pygame.sprite.Sprite):
     jump_speed = 2
     self.rect.y += self.speed/jump_speed
     pygame.time.wait(jump_time)
-    self.rect.x += self.speed/jump_speed
+    self.rect.y += self.speed/jump_speed
   def attack(self):
     '''
     shows bearcat hitting player

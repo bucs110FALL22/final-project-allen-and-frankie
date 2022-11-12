@@ -11,7 +11,7 @@ class Player(pygame.sprite.Sprite):
     if major == "cs":
       self.move_effect = .8
       self.health_effect = 1
-    if major == "bio"
+    if major == "bio":
       self.move_effect = 1
       self.health_effect = 2    
     self.speed = 20*self.move_effect
@@ -32,7 +32,7 @@ class Player(pygame.sprite.Sprite):
     jump_speed = 2
     self.rect.y += self.speed/jump_speed
     pygame.time.wait(jump_time)
-    self.rect.x += self.speed/jump_speed
+    self.rect.y += self.speed/jump_speed
   def attack(self):
     '''
     makes player attack

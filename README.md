@@ -42,7 +42,31 @@
     * << A simple drawing that shows the class relationships in your code (see below for an example). This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm. >>
         * ![class diagram](assets/class_diagram.jpg) 
 * Classes
-    class Player
+    class Player:
+     __init__:
+        health_effect,_move_effect,speed,health,image,rect
+     move_left:
+        rect.x
+     jump:
+        jump_time,jump_speed,rect.y
+     attack:
+         image load
+     hit:
+          image,load,health
+    class Bearcat:
+     __init__:
+        health_effect,_move_effect,speed,health,image,rect
+     move_left:
+        rect.x
+     move_right:
+        rect.x
+     jump:
+        jump_time,jump_speed,rect.y
+     attack:
+         image load
+     hit:
+          image,load,health
+  
     
     
     * << You should have a list of each of your classes with a description. >>

@@ -7,23 +7,41 @@ class Player(pygame.sprite.Sprite):
     self - instance of player
     major - major of player (affects stats)
     '''
-    super().__init__(self)
+    super().__init__()
     if major == "cs":
       self.move_effect = .8
       self.health_effect = 1
     if major == "bio":
       self.move_effect = 1
       self.health_effect = 2    
-    self.speed = 20*self.move_effect
+    self.speed = 12*self.move_effect
     self.health = 5*self.health_effect
-    self.image = pygame.image.load("assets/student.png")
-    self.rect = self.image.get_rect()
+    self.image = pygame.image.load("assets/player.png")
+    self.image_1 = pygame.transform.scale(self.image,(100,100))
+    self.rect = self.image_1.get_rect()
+    self.rect.x = 10
+    self.rect.y = 60
+  def move_right(self):
+    '''
+    makes player move right
+    
+    '''
+    
+    self.image = pygame.image.load("assets/player_walk.png")  
+    
+    self.rect.x += self.speed
+
   def move_left(self):
     '''
     makes player move left
     
     '''
-    self.rect.x += self.speed
+    
+    self.image = pygame.image.load("assets/player_walk.png")  
+    
+    self.rect.x -= self.speed
+
+        
   def jump(self):
     '''
     makes player jump
@@ -44,6 +62,18 @@ class Player(pygame.sprite.Sprite):
     '''
     shows player getting hit
     '''
-    # self.rect.collidepoint
+   
     self.image.load("assets/student_hit.png")
     self.health -= 1
+
+  def slow(self, set):
+  #   '''
+  #   slows the player down when colliding with river
+  #   arguments:none
+  #   return:none
+  #   '''
+    if set == True:
+      self.move_effect = 0.1
+    else:
+      self.move_effect = 0.8
+    

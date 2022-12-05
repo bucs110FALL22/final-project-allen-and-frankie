@@ -29,8 +29,8 @@ class River(pygame.sprite.Sprite):
   #   '''
     
 
-  def check(self):
-    return self.rect.collidepoint()
+  # def check(self):
+  #   return self.rect.collidepoint()
   # def increase_depth(self, depth_change):
   #   '''
   #   increases the depth attribute for the river if raining/flooding

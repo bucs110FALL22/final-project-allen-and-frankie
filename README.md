@@ -2,21 +2,21 @@
 # CS110 Project Proposal
 # << Project Title >>
 ## CS 110 Final Project
-### << Semester, Year >>
+### Fall, 2022
 ### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit?usp=sharing)
 
-<< [[repl](#)](https://replit.com/join/fizwwfyakr-frankrumreich) >>
+ [[repl](#)](https://replit.com/join/fizwwfyakr-frankrumreich) 
 
-<< [link to demo presentation slides](#) >>
+### [[link to demo presentation slides](https://docs.google.com/presentation/d/1l5OdsMlftltgthLHm9CmS-mNswvh1ZmHHgjIrq2fiAk/edit?usp=sharing)]
 
-### Team: << team name >>
-#### << Frank Rumreich, Allen Domingo >>
+### Team: Allen and Frankie
+#### Frank Rumreich, Allen Domingo 
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+Our project is a platformer game in which the player has to navigate through levels in order to find Harvey Stenger, who has gone missing in the nature preserve. There are bearcat enemies which when touched bring you back to the start of the level, and the goal of each level is to reach the beet. At the start, you can choose to either be a computer science major or a business major, depending on the difficulty you want. Choosing computer science as your major makes you slower.
 
 ***    
 
@@ -27,7 +27,13 @@
     
     
 - **Final GUI**
-  - << You should also have a screenshot of each screen for your final GUI >>
+        * ![class diagram](assets/menu1gui.png)
+        * ![class diagram](assets/menu2gui.png)
+        * ![class diagram](assets/level1gui.png)
+        * ![class diagram](assets/level2gui.png)
+        * ![class diagram](assets/level3gui.png)
+        * ![class diagram](assets/level4gui.png)
+        * ![class diagram](assets/endgui.png) 
 
 ***        
 
@@ -38,9 +44,13 @@
          For each additional module you should include
          - url for the module documentation
          - a short description of the module >>
+
+  Pickle :
+  -https://docs.python.org/3/library/pickle.html
+  - Allows the program to store, read, and edit data locally
 * Class Interface Design
     * << A simple drawing that shows the class relationships in your code (see below for an example). This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm. >>
-        * ![class diagram](assets/class_diagram.jpg) 
+        * ![class diagram](assets/diagram.png) 
 * Classes
     class Player:
      __init__:
@@ -67,7 +77,9 @@
      hit:
           image,load,health
   
-    
+    class Harvey:
+     __init__:
+        image and rect load
     
     * << You should have a list of each of your classes with a description. >>
 
@@ -87,16 +99,29 @@ The Project is broken down into the following file structure:
 
 ## Tasks and Responsibilities 
 
-   * Outline the team member roles and who was responsible for each class/method, both individual and collaborative.
+   
+   Allen - Most of controller class, player class, level builder class, harvey class, next class, menus
+   Frankie - Level builder class, some controller class, some bearcat class, sprites, river prior to removal, ATP
+   collaborated on readme/proposal
 
 ## Testing
 
-* << Describe your testing strategy for your project. >>
+* Writing code little by little, and testing if it functions properly, and printing characteristics like the level, but mainly testing graphically occurred.
 
 ## ATP
 
-| Step                 |Procedure             |Expected Results                   |
-|----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+| Step                 |Procedure             |Expected Results                   |Pass               |
+|----------------------|:--------------------:|----------------------------------:|------------------:|
+|  1                   | Run Program          |GUI screen displays with the starting menu|                |
+|  2                   | press space to begin game | major selection menu appears |               |
+|  3                   | press B on major selection | game begins                 |               |
+|  4                   | hold down 'D'  key   | player moves right                |               |
+|  5                   | hold down 'A' key    | player moves left                 |               |
+|  6                   | press 'W' key        | player jumps upwards then falls back down |               |
+|  7                   |move player to land on platform  | player stops falling, stays on platform |               |
+|  8                   | jump onto platform from underneath | player jumps through platform, lands on platform on the way down |               |
+|  9                   | collide with a bearcat| player is moved back to the starting point, at the same level |               |
+|  10                  | collide with a beet  | the level changes, which includes background and level layout|               |
+|  11                  | press space over harvey | ending dialogue box pops up |               |
+
+

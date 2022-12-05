@@ -1,7 +1,7 @@
 import pygame
 
 class Bearcat(pygame.sprite.Sprite):
-  def __init__(self):
+  def __init__(self,x,y, distance):
     '''
     initializes bearcat enemy
     self - instance of bearcat
@@ -9,10 +9,14 @@ class Bearcat(pygame.sprite.Sprite):
     super().__init__()
     self.speed = 1
     self.health = 2
-    self.image = pygame.image.load("assets/bearcat.png")
+    self.image = pygame.image.load("assets/newbearcat.png")
     self.rect = self.image.get_rect()
-    self.rect.x = 700
-    self.rect.y = 60
+    self.rect.x = x
+    self.rect.y = (y-60)
+    self.startingx = x
+    self.distance = distance
+    
+    
   def move_left(self):
     '''
     makes bearcat move left
@@ -45,8 +49,23 @@ class Bearcat(pygame.sprite.Sprite):
     '''
     shows bearcat getting hit
     '''
-    # self.rect.collidepoint
     self.image.load("assets/bearcat_hit.png")
     self.health -= 1
   # def update(self):
+
+  def move(self):
+    # print("updating bear")
+    '''
+    makes the bearcat move on its own
+    '''
+    while True:
+      if self.rect.x < (self.startingx - self.distance):
+        direction = 0
+      else:
+        direction = 1
+      if direction == 1:
+        self.move_right()
+      else:
+        self.move_left()
+  
     
